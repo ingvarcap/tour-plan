@@ -562,8 +562,15 @@ template {
 }
 
 @media (max-width: 576px) {
+  .container {
+    min-width: 320px;
+  }
   .logo {
     width: 99px;
+  }
+  .navbar-top {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
