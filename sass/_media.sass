@@ -10,6 +10,9 @@
   .card 
     width: 230px
     height: 230px
+  .footer
+    &__input
+      flex-basis: 100%
 @media ( max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -78,6 +81,8 @@
       line-height: 38px
       margin-bottom: 50px
   .activities
+    padding-top: 50px
+    padding-bottom: 47px
     &-wrapper
       flex-wrap: wrap
     &__card
@@ -85,6 +90,52 @@
   .card
     width: 339px
     height: 255px
+    &__title
+      font-weight: 500
+      margin-bottom: 22px
+      max-width: 200px
+      text-align: left
+  .footer
+    padding-top: 69px
+    &-wrapper
+      grid-template-columns: repeat (12, 1fr)
+      grid-row-gap: 40px          
+    &__input
+      flex-basis: 49%
+    &__logo
+      width: 104px
+      height: 120px
+      grid-row: 1/2
+      grid-column: span 4
+    &__social
+      &-network
+        grid-row: 1/2
+        grid-column: span 10
+        align-self: center
+    &__title
+      &--inline
+        margin-right: 32px
+    &__categories
+      grid-row: 2/3 
+      grid-column: span 4
+    &__legal
+      grid-column: span 4
+    &__additional
+      grid-column: span 4
+    &__contact
+      &-details
+        grid-row: 3
+        grid-column: span 10
+        margin-top: 22px
+      &-form
+        grid-column: span 10
+        grid-row: 4 
+    &-bottom
+      &-wrapper
+        grid-template-columns: 61% 39%
+        margin-top: -40px
+      &__list
+        justify-self: start
 @media ( max-width: 767px)  
   .container
     max-width: 576px
@@ -171,6 +222,11 @@
   .card
     width: 49%
     height: 255px
+  .footer
+    &__input
+      width: 48%
+    &__message
+      width: 538px
 @media (max-width: 576px)
   .container 
     max-width: 320px
@@ -194,6 +250,9 @@
       height: 179px
     &-slider
       height: 179px
+  .booking
+    padding: 24px
+    padding-bottom: 20px
   .newsletter
     padding: 76px 0 83px 0
     min-height: 319px
@@ -222,11 +281,16 @@
           margin-left: -88px
         &--next
           margin-right: -88px
+      &__username
+        margin-top: 0
+      &__avatar
+        margin-bottom: 10px
   .activities
+    padding-bottom: 40px
     &__title
       font-size: 18px
       line-height: 23px
-      margin-bottom: 31px
+      margin-bottom: 37px
   .card
     width: 280px
     &:nth-child(1)
@@ -237,7 +301,77 @@
       order: -3
     &:nth-child(4)
       order: -1
-      
-        
-    
+  .footer
+    &-wrapper
+      grid-template-columns: 1fr
+      margin-bottom: 30px
+      grid-row-gap: 30px
+    &__logo
+      grid-row: 1
+      grid-column: 1
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+        display: flex
+        flex-wrap: wrap
+    &__title
+      &--inline
+        margin-bottom: 27px
+      &--mb-3
+        margin-top: -10px
+        margin-bottom: 32px
+        &-320
+          margin-top: 15px
+          margin-bottom: 15px
+    &__additional
+      grid-row: 4
+      grid-column: 1
+    &__categories
+      grid-row: 5
+      grid-column: 1
+    &__legal
+      grid-row: 3
+      grid-column: 1
+    &__text
+      margin: 0 0 20px 0
+    &__icon
+      &-wrapper
+        min-width: 29px
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+      &-form
+        grid-row: 7
+        grid-column: 1
+    &__message
+      width: 280px
+      margin-bottom: 15px
+    &__input
+      flex-basis: 100%
+    &__info
+      order: 0
+      flex-basis: 100%
+      margin-bottom: 15px
+    &__button
+      order: 1
+    &-bottom
+      &-wrapper
+        grid-template-columns: 1fr
+        margin-top: 0
+      &__list
+        grid-row: 1
+        font-size: 12px
+        line-height: 15px
+        justify-content: space-between
+        justify-self: stretch
+        margin-bottom: 10px
+      &__img
+        grid-row: 2
+        justify-self: start
+      &__link
+        &:last-child
+          margin-right: 0
+
     
