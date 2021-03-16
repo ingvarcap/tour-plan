@@ -1,0 +1,129 @@
+.footer
+  background-color: $dark
+  color: $light
+  padding-top: 108px
+  padding-bottom: 46px
+  &-wrapper
+    display: grid
+    grid-template-columns: repeat(4, minmax(min-content, 1fr))
+    grid-gap: 20px
+    grid-auto-rows: minmax(40px, min-content)
+    align-items: start
+    margin-bottom: 95px
+  &__logo
+    grid-row: 1/3
+    width: 166px
+    align-self: stretch
+  &__categories
+    grid-row: 1/4
+  &__social
+    &-links
+      display: flex
+      align-items: center
+      min-width: 83px
+      justify-content: space-between
+    &-network
+      display: flex
+      align-content: start
+      grid-row: 2/4
+      grid-column: span 2
+  &__contact-details
+    grid-column: span 2
+  &__contacts-form
+    grid-column: span 2
+  &__form 
+    display: flex
+    align-items: start
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+  &__ul
+    padding: 0
+    margin: 0
+    list-style: none
+  &__title
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    margin: 0 0 16px 0
+    text-transform: uppercase
+    &--inline
+      margin: 0 43px 0 0
+    &--mb-3
+      margin-bottom: 30px
+  &__item
+    display: flex
+    align-items: flex-start
+    font-size: 14px
+    line-height: 22px
+    color: $footer-text-color
+    &--mb-2
+      margin-bottom: 20px
+  &__icon
+    &-wrapper
+      min-width: 40px
+  &__text
+    color: $footer-text-color
+    margin-bottom: 22px
+  &__link
+    text-decoration: none
+    color: inherit
+  &__input
+    background-color: #ffffff
+    border-radius: 4px
+    border: none
+    padding: 0 23px
+    height: 50px
+    margin-bottom: 15px
+    flex-basis: 48%
+  &__message
+    background-color: #ffffff
+    border-radius: 4px
+    padding: 18px 23px
+    border: none
+    flex-basis: 100%
+    margin-bottom: 23px
+    min-height: 123px
+    resize: none
+  &__button
+    min-width: 160px
+    min-height: 50px
+    padding: 18px
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: $light
+    background-color: $primary
+    border: none
+    border-radius: 4px
+  &__info
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: #E0E0E0
+.footer-bottom
+  &-wrapper
+    display: grid
+    grid-template-columns: 65% 35%
+    align-items: center
+  &__list
+    display: flex
+    flex-direction: row
+    list-style: none
+    align-items: center
+    margin: 0
+    padding: 0
+    align-self: end
+    justify-self: end
+  &__item
+    font-size: 12px
+    line-height: 15px
+  &__link
+    display: block
+    margin-right: 20px
+    text-decoration: none
+    color: $light
+  &__img
+    align-self: end
+    justify-self: end
+
