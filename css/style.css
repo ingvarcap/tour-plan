@@ -1697,6 +1697,11 @@ template {
     width: 49%;
     height: 255px;
   }
+  .footer-wrapper {
+    -ms-grid-columns: (minmax(min-content, 1fr))[12];
+        grid-template-columns: repeat(12, minmax(-webkit-min-content, 1fr));
+        grid-template-columns: repeat(12, minmax(min-content, 1fr));
+  }
   .footer__input {
     width: 48%;
   }
