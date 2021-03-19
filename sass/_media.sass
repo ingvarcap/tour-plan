@@ -98,28 +98,28 @@
   .footer
     padding-top: 69px
     &-wrapper
-      grid-template-columns: repeat (12, 1fr)
-      grid-row-gap: 40px          
+      grid-template-columns: repeat (10, 10%)
+      grid-row-gap: 45px          
     &__input
       flex-basis: 47%
     &__logo
       width: 104px
-      height: 120px
+      height: 110px
       grid-row: 1/2
       grid-column: span 4
     &__social
       &-network
         grid-row: 1/2
-        grid-column: span 10
+        grid-column: span 11
         align-self: center
     &__title
       &--inline
-        margin-right: 27px
+        margin-right: 46px
       &--mb-3
         margin-top: 0
     &__categories
       grid-row: 2/3 
-      grid-column: span 4
+      grid-column: span 5
     &__legal
       grid-column: span 4
       justify-self: end
@@ -140,7 +140,7 @@
         margin-top: -40px
       &__list
         justify-self: start
-@media ( max-width: 767px)  
+@media ( max-width: 767px) 
   .container
     max-width: 576px
     width: 92%
@@ -172,7 +172,8 @@
       top: 78px
       padding-top: 56px
       &--visible
-        display: block  
+        display: block 
+        overflow: auto 
     &-menu
       flex-direction: column 
       overflow: scroll
@@ -385,10 +386,12 @@
         grid-column: 1
         display: flex
         flex-wrap: wrap
+        margin-bottom: -4px
     &__title
       margin-bottom: 11px
       &--inline
         margin-bottom: 21px
+        margin-right: 32px
       &--mb-3
         margin-top: -16px
         margin-bottom: 29px
