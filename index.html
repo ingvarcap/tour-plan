@@ -148,7 +148,7 @@
               Free
             </p>
           </div>
-          <div class="rating hotel-info__rating">
+          <div data-toggle="modal" class="rating hotel-info__rating">
             <span class="rating__text">User Rattings</span>
             <span class="rating__counter">4.5/</span>
           </div>
@@ -236,7 +236,9 @@
                   <span class="booking__num">12100</span>
                 </a>
               </div>
-              <button class="button booking__button">View Other Options</button>
+              <button data-toggle="modal" class="button booking__button">
+                View Other Options
+              </button>
             </div>
             <div class="map">
               <!-- iframe
@@ -557,12 +559,18 @@
                     alt="icon: phone"
                   />
                 </div>
-                    Tel (business hours):
-                    <a class="footer__tel-link" href="tel:269500">269 1500</a><br>
-                        Tel (hotline) Monday - Saturday:
-                    <a class="footer__tel-link" href="tel:52-56-61-38"></a>
-                      52-56-61-38</a> (08:00 am – 20:00 pm)<br>
-                  Tel (hotline) Sunday: <a class="footer__tel-link" href="tel:52-56-61-38">52-56-61-38</a> (08:00 am – 14:00 pm)
+                Tel (business hours):
+                <a class="footer__tel-link" href="tel:269500">269 1500</a><br />
+                Tel (hotline) Monday - Saturday:
+                <a class="footer__tel-link" href="tel:52-56-61-38">
+                  52-56-61-38</a
+                >
+                (08:00 am – 20:00 pm)<br />
+                Tel (hotline) Sunday:
+                <a class="footer__tel-link" href="tel:52-56-61-38"
+                  >52-56-61-38</a
+                >
+                (08:00 am – 14:00 pm)
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
@@ -572,7 +580,9 @@
                     alt="icon: email"
                   />
                 </div>
-                cherly.lawson@example.com
+                <a class="footer__item-link" href="#"
+                  >cherly.lawson@example.com</a
+                >
               </li>
             </ul>
           </div>
@@ -582,20 +592,23 @@
             >
               Send us a message
             </h3>
-            <form action="#" class="footer__form">
+            <form action="send.php" method="POST" class="footer__form">
               <input
                 type="text"
                 class="input footer__input"
                 placeholder="Your Full Name*"
+                name="name"
               />
               <input
                 type="text"
                 class="input footer__input"
                 placeholder="Phone Number*"
+                name="phone"
               />
               <textarea
-                class="footer__message"
+                class="message footer__message"
                 placeholder="Message"
+                name="message"
               ></textarea>
               <button class="button footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>
@@ -620,6 +633,47 @@
         </div>
       </div>
     </footer>
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__dialog">
+        <a href="#" class="modal__close">
+          <img src="img/close.svg" alt="" />
+        </a>
+        <div class="modal__contact-form">
+          <h3 class="modal__title footer__title--mb-3 modal__title--mb-3-320">
+            Send us a message
+          </h3>
+          <form action="send.php" method="POST" class="footer__form">
+            <input
+              type="text"
+              class="input modal__input"
+              placeholder="Your Full Name*"
+              name="name"
+            />
+            <input
+              type="text"
+              class="input modal__input"
+              placeholder="Phone Number*"
+              name="phone"
+            />
+            <input
+              type="text"
+              class="input modal__input"
+              placeholder="Email*"
+              name="email"
+            />
+            <textarea
+              class="message modal__message"
+              placeholder="Message"
+              name="message"
+            ></textarea>
+            <button class="button modal__button" type="submit">Send</button>
+            <span class="modal__info">* Required Fields</span>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
