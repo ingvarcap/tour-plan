@@ -1,4 +1,6 @@
 .modal
+  position: relative
+  overflow-y: scroll
   &__overlay
     position: fixed
     left: 0
@@ -11,8 +13,10 @@
     opacity: 0
     transition: opacity 0.2s 
     &--visible
+      z-index: 100
       visibility: visible
       opacity: 1
+      overflow-y: auto
   &__dialog
     position: fixed
     top: 50%
@@ -30,6 +34,7 @@
     &--visible
       visibility: visible
       opacity: 1
+      overflow-y: auto
   &__title
     font-weight: bold
     font-size: 18px
@@ -44,6 +49,8 @@
     text-decoration: none
     cursor: pointer
   &__form 
+    overflow-y: auto
+    z-index: 200
     display: flex
     align-items: start
     justify-content: space-between
