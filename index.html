@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -355,7 +355,7 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img/reviews-avatar-2.jpeg"
+                    src="img/reviews-avatar-2.jpg"
                     alt="Photo: Angela Merkel"
                     class="reviews-slider__avatar"
                   />
@@ -381,7 +381,7 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img/reviews-avatar-3.jpeg"
+                    src="img/reviews-avatar-3.jpg"
                     alt="Photo: Kaley Cuoco"
                     class="reviews-slider__avatar"
                   />
@@ -656,7 +656,7 @@
               <div class="footer__input-group">
                 <input
                   type="tel"
-                  class="input footer__input input__phone"
+                  class="input footer__input footer__input--phone"
                   placeholder="Phone Number*"
                   name="phone"
                   required
@@ -697,7 +697,7 @@
           <img src="img/close.svg" alt="" />
         </a>
         <div class="modal__contact-form">
-          <h3 class="modal__title footer__title--mb-3 modal__title--mb-3-320">
+          <h3 class="modal__title modal__title--mb-3 modal__title--mb-3-320">
             Booking
           </h3>
           <form action="send.php" method="POST" class="modal__form form">
@@ -711,7 +711,7 @@
             />
             <input
               type="tel"
-              class="input modal__input input__phone"
+              class="input modal__input modal__input--phone"
               placeholder="Phone Number*"
               name="phone"
               required
@@ -741,7 +741,7 @@
           <img src="img/close.svg" alt="" />
         </a>
         <div class="modal__contact-form">
-          <h3 class="modal__title footer__title--mb-3 modal__title--mb-3-320">
+          <h3 class="modal__title modal__title--mb-3 modal__title--mb-3-320">
             Rating
           </h3>
           <form action="send.php" method="POST" class="modal__form form">
@@ -755,7 +755,7 @@
             />
             <input
               type="tel"
-              class="input modal__input input__phone"
+              class="input modal__input modal__input--phone"
               placeholder="Phone Number*"
               name="phone"
               required

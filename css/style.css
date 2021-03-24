@@ -516,7 +516,6 @@ template {
   position: absolute;
   width: 65px;
   height: 100%;
-  top: -4px;
   right: 2px;
   border: none;
   background-color: #EC1F46;
@@ -1537,8 +1536,25 @@ template {
   color: #E0E0E0;
 }
 
-.hotel__link {
-  min-width: 160px;
+.message-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.message__link {
+  display: block;
+  max-width: 160px;
   min-height: 50px;
   padding: 18px;
   font-weight: bold;
@@ -1597,10 +1613,6 @@ template {
   }
   .search__input {
     width: 340px;
-  }
-  .search__button {
-    top: 3px;
-    right: 11px;
   }
   .hotel {
     margin-bottom: 60px;
@@ -1700,11 +1712,6 @@ template {
   .footer {
     padding-top: 69px;
   }
-  .footer-wrapper {
-    -ms-grid-columns: repeat 10, 10%;
-        grid-template-columns: repeat 10, 10%;
-    grid-row-gap: 45px;
-  }
   .footer__input-group {
     -ms-flex-preferred-size: 47%;
         flex-basis: 47%;
@@ -1715,13 +1722,11 @@ template {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
-    grid-column: span 4;
   }
   .footer__social-network {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
-    grid-column: span 11;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -1736,15 +1741,10 @@ template {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
-    grid-column: span 5;
   }
   .footer__legal {
-    grid-column: span 4;
     -ms-grid-column-align: end;
         justify-self: end;
-  }
-  .footer__additional {
-    grid-column: span 4;
   }
   .footer__text {
     font-size: 14px;
@@ -1755,12 +1755,10 @@ template {
   .footer__contact-details {
     -ms-grid-row: 3;
     grid-row: 3;
-    grid-column: span 10;
     margin-top: 22px;
     margin-bottom: -3px;
   }
   .footer__contact-form {
-    grid-column: span 10;
     -ms-grid-row: 4;
     grid-row: 4;
     width: 539px;
@@ -1773,8 +1771,6 @@ template {
             flex-direction: row;
   }
   .footer-bottom-wrapper {
-    -ms-grid-columns: 61% 39%;
-        grid-template-columns: 61% 39%;
     margin-top: -40px;
   }
   .footer-bottom__list {
@@ -1975,11 +1971,6 @@ template {
     width: 49%;
     height: 255px;
   }
-  .footer-wrapper {
-    -ms-grid-columns: (minmax(min-content, 1fr))[12];
-        grid-template-columns: repeat(12, minmax(-webkit-min-content, 1fr));
-        grid-template-columns: repeat(12, minmax(min-content, 1fr));
-  }
   .footer__input-group {
     width: 100%;
   }
@@ -1994,9 +1985,20 @@ template {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .footer__button {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .footer__info {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin-bottom: 15px;
   }
   .map__iframe {
     width: 100%;
@@ -2054,6 +2056,14 @@ template {
   }
   .hotel-slider {
     height: 179px;
+  }
+  .hotel-slider__button--prev {
+    left: 0;
+    background-image: url(../img/arrow-prev-small.svg);
+  }
+  .hotel-slider__button--next {
+    background-image: url(../img/arrow-next-small.svg);
+    right: 0;
   }
   .hotel-right {
     min-height: 418px;
@@ -2241,17 +2251,8 @@ template {
     font-size: 12px;
   }
   .footer__info {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    margin-bottom: 15px;
-  }
-  .footer__button {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
   }
   .footer-bottom-wrapper {
     -ms-grid-columns: 1fr;
@@ -2291,6 +2292,15 @@ template {
   .modal__title {
     font-size: 12px;
     margin-top: 15px;
+  }
+  .message-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 }
 /*# sourceMappingURL=style.css.map */

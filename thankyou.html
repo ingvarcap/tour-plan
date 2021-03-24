@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
+      rel="preload"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -20,7 +20,12 @@
     <header class="navbar navbar--mobile--fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="index.html" class="logo">
+          <a
+            href="index.html"
+            class="logo"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
             <img
               src="img/horisontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -28,6 +33,8 @@
             />
           </a>
           <form
+            data-aos-delay="200"
+            data-aos="fade-right"
             action="#"
             class="search navbar__search navbar__search--mobile--hidden"
           >
@@ -40,7 +47,12 @@
               <img src="img/search.svg" alt="Icon: search" />
             </button>
           </form>
-          <a href="#" class="user navbar__user navbar__user--mobile--hidden">
+          <a
+            data-aos-delay="300"
+            data-aos="fade-right"
+            href="#"
+            class="user navbar__user navbar__user--mobile--hidden"
+          >
             <img
               src="img/user-avatar.jpg"
               alt="avatar: Nathan"
@@ -128,18 +140,16 @@
         </ul>
       </div>
     </nav>
-    <section class="hotel">
+    <section class="message">
       <div class="container">
-        <div class="hotel-info">
-          <div class="hotel-info__text">
-            <div class="hotel-wrapper">
-              <h1 class="hotel-name hotel-info__name">Message sent</h1>
-            </div>
-            <p class="hotel-description hotel-info__description">
+        <div class="message-wrapper">
+          <div class="message-info__text">
+            <h2 class="message__name">Message sent</h2>
+            <p class="message__description">
               Our manager will call you in 5 minutes.
             </p>
           </div>
-          <a href="index.html" class="hotel__link">back to home page</a>
+          <a href="index.html" class="message__link">back to home page</a>
         </div>
       </div>
     </section>
@@ -296,23 +306,27 @@
             >
               Send us a message
             </h3>
-            <form action="send.php" method="POST" class="footer__form">
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Your Full Name*"
-                name="name"
-                required
-              />
-              <input
-                type="tel"
-                class="input footer__input input__phone"
-                placeholder="Phone Number*"
-                name="phone"
-                required
-              />
+            <form action="send.php" method="POST" class="footer__form form">
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  class="input footer__input"
+                  placeholder="Your Full Name*"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="footer__input-group">
+                <input
+                  type="tel"
+                  class="input footer__input footer__input--phone"
+                  placeholder="Phone Number*"
+                  name="phone"
+                  required
+                />
+              </div>
               <textarea
-                class="footer__message"
+                class="message footer__message"
                 placeholder="Message"
                 name="message"
               ></textarea>
@@ -339,7 +353,11 @@
         </div>
       </div>
     </footer>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

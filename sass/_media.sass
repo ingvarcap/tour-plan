@@ -33,9 +33,6 @@
   .search
     &__input
       width: 340px
-    &__button
-      top: 3px
-      right: 11px
   .hotel
     margin-bottom: 60px
     padding-top: 13px
@@ -105,10 +102,7 @@
       max-width: 200px
       text-align: left
   .footer
-    padding-top: 69px
-    &-wrapper
-      grid-template-columns: repeat (10, 10%)
-      grid-row-gap: 45px          
+    padding-top: 69px         
     &__input
       &-group
         flex-basis: 47%
@@ -116,11 +110,9 @@
       width: 104px
       height: 110px
       grid-row: 1/2
-      grid-column: span 4
     &__social
       &-network
         grid-row: 1/2
-        grid-column: span 11
         align-self: center
     &__title
       &--inline
@@ -129,12 +121,8 @@
         margin-top: 0
     &__categories
       grid-row: 2/3 
-      grid-column: span 5
     &__legal
-      grid-column: span 4
       justify-self: end
-    &__additional
-      grid-column: span 4
     &__text
       font-size: 14px
     &__icon
@@ -143,11 +131,9 @@
     &__contact
       &-details
         grid-row: 3
-        grid-column: span 10
         margin-top: 22px
         margin-bottom: -3px
       &-form
-        grid-column: span 10
         grid-row: 4 
         width: 539px
         font-size: 12px
@@ -155,7 +141,6 @@
       flex-direction: row
     &-bottom
       &-wrapper
-        grid-template-columns: 61% 39%
         margin-top: -40px
       &__list
         justify-self: start
@@ -297,8 +282,6 @@
     width: 49%
     height: 255px
   .footer
-    &-wrapper
-      grid-template-columns: repeat(12, minmax(min-content, 1fr))
     &__input
       &-group
         width: 100%
@@ -307,7 +290,12 @@
     &__form
       display: flex
       flex-direction: column
-      align-items: left
+      align-items: start
+    &__button
+      order: 1
+    &__info
+      order: 0
+      margin-bottom: 15px
   .map__iframe
     width: 100%
   .modal
@@ -355,6 +343,13 @@
       height: 179px
     &-slider
       height: 179px
+      &__button
+        &--prev
+          left: 0
+          background-image: url(../img/arrow-prev-small.svg)
+        &--next
+          background-image: url(../img/arrow-next-small.svg) 
+          right: 0
     &-right
       min-height: 418px
   .booking
@@ -478,11 +473,7 @@
         font-family: 'Nunito', sans-serif
         font-size: 12px
     &__info
-      order: 0
       flex-basis: 100%
-      margin-bottom: 15px
-    &__button
-      order: 1
     &-bottom
       &-wrapper
         grid-template-columns: 1fr
@@ -512,4 +503,8 @@
     &__title
       font-size: 12px
       margin-top: 15px
+  .message
+    &-wrapper
+      flex-direction: column
+      align-items: start
     

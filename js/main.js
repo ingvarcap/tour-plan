@@ -71,7 +71,7 @@ $(document).ready(function () {
     });
   });
   //Отправка номера телефона
-  $(".input__phone").mask("+7(000)000-00-00", {
+  $(".modal__input--phone,.footer__input--phone").mask("+7(ZZZ)ZZZ-ZZ-ZZ", {
     translation: {
       Z: {
         pattern: /[0-9]/,
