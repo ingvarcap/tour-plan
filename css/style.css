@@ -49,6 +49,19 @@ input {
   cursor: pointer;
 }
 
+.button:focus {
+  background-color: #191d1e;
+}
+
+.button:hover {
+  color: #b3ced1;
+  opacity: 0.5;
+}
+
+.button:active {
+  color: #57a1a9;
+}
+
 .invalid {
   color: #EC1F46;
   border-bottom: 1px solid #EC1F46;
