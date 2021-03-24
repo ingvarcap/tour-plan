@@ -1,6 +1,5 @@
 .modal
-  position: relative
-  overflow-y: scroll
+  z-index: 200
   &__overlay
     position: fixed
     left: 0
@@ -16,7 +15,6 @@
       z-index: 100
       visibility: visible
       opacity: 1
-      overflow-y: auto
   &__dialog
     position: fixed
     top: 50%
@@ -34,7 +32,6 @@
     &--visible
       visibility: visible
       opacity: 1
-      overflow-y: auto
   &__title
     font-weight: bold
     font-size: 18px
@@ -48,9 +45,11 @@
     top: 17px
     text-decoration: none
     cursor: pointer
+  &__contact
+    &-form
+      overflow: scroll
+      z-index: 200
   &__form 
-    overflow-y: auto
-    z-index: 200
     display: flex
     align-items: start
     justify-content: space-between
@@ -58,11 +57,13 @@
     align-items: center
   &__input
     width: 100%
-    margin-bottom: 15px
+    margin-top: 15px
   &__message 
     width: 100%
     min-height: 123px
-    margin-bottom: 15px
+    margin-top: 15px
+  &__button
+    margin-top: 15px
   &__info
     font-weight: bold
     font-size: 12px

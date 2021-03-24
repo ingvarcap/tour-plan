@@ -12,7 +12,8 @@
     height: 230px
   .footer
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
 @media ( max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -109,7 +110,8 @@
       grid-template-columns: repeat (10, 10%)
       grid-row-gap: 45px          
     &__input
-      flex-basis: 47%
+      &-group
+        flex-basis: 47%
     &__logo
       width: 104px
       height: 110px
@@ -149,6 +151,8 @@
         grid-row: 4 
         width: 539px
         font-size: 12px
+    &__form
+      flex-direction: row
     &-bottom
       &-wrapper
         grid-template-columns: 61% 39%
@@ -157,8 +161,10 @@
         justify-self: start
   .modal
     &__dialog
-      padding: 25px 20px
+      padding: 25px 75px
       width: 500px
+    &__form
+      padding: 0
 @media ( max-width: 767px) 
   .container
     max-width: 576px
@@ -294,13 +300,14 @@
     &-wrapper
       grid-template-columns: repeat(12, minmax(min-content, 1fr))
     &__input
-      width: 48%
+      &-group
+        width: 100%
     &__message
       width: 538px
     &__form
       display: flex
       flex-direction: column
-      align-items: center
+      align-items: left
   .map__iframe
     width: 100%
   .modal
@@ -464,11 +471,12 @@
       width: 280px
       margin-bottom: 15px
     &__input
-      flex-basis: 100%
-      width: 100%
-      padding: 18px 0 18px 23px
-      font-family: 'Nunito', sans-serif
-      font-size: 12px
+      &-group
+        flex-basis: 100%
+        width: 100%
+        padding: 0 0 18px 0 
+        font-family: 'Nunito', sans-serif
+        font-size: 12px
     &__info
       order: 0
       flex-basis: 100%

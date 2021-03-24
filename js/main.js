@@ -51,4 +51,32 @@ $(document).ready(function () {
     modalOverlay.removeClass("modal__overlay--visible");
     modalDialog.removeClass("modal__dialog--visible");
   }
+  //Обработка форм
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: {
+          required: "Please specify your name",
+          minlength: "the name must not be shorter than 2 letters",
+        },
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com",
+        },
+        phone: {
+          required: "Phone required",
+        },
+      },
+    });
+  });
+  //Отправка номера телефона
+  $(".input__phone").mask("+7(000)000-00-00", {
+    translation: {
+      Z: {
+        pattern: /[0-9]/,
+        optional: true,
+      },
+    },
+  });
 });
