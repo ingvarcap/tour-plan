@@ -1481,7 +1481,7 @@ template {
 }
 
 .modal__contact-form {
-  overflow: scroll;
+  overflow: auto;
   z-index: 200;
 }
 
@@ -1827,7 +1827,7 @@ template {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
   }
   .navbar-menu__item {
     margin-bottom: 20px;
