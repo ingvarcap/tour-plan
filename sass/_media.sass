@@ -128,7 +128,7 @@
     height: 255px
     &__title
       font-weight: 500
-      margin-bottom: 22px
+      margin-bottom: 16px
       max-width: 200px
       text-align: left
   .footer
@@ -197,6 +197,8 @@
   body
     padding-top: 78px
   .navbar
+    &__search
+      margin-right: 0
     &--mobile
       &--fixed
         position: fixed
@@ -333,13 +335,6 @@
     &__message
       width: 538px
     &__form
-      display: flex
-      flex-direction: column
-      align-items: start
-    &__button
-      order: 1
-    &__info
-      order: 0
       margin-bottom: 15px
   .map__iframe
     width: 100%
@@ -467,6 +462,12 @@
         display: flex
         flex-wrap: wrap
         margin-bottom: -4px
+        flex-direction: column
+      &-links
+        justify-content: start
+    &__link
+      &--social
+        margin-right: 10px
     &__title
       margin-bottom: 14px
       &--inline
@@ -497,7 +498,15 @@
         min-width: 29px
         margin-left: 2px
     &__form
+      display: flex
       flex-direction: row
+      align-items: start
+      margin-bottom: 0
+    &__button
+      order: 1
+    &__info
+      margin-bottom: 15px
+      order: 0
     &__contact
       &-details
         grid-row: 6
@@ -514,7 +523,6 @@
       &-group
         flex-basis: 100%
         width: 100%
-        padding: 0 0 18px 0 
         font-family: 'Nunito', sans-serif
         font-size: 12px
     &__info
@@ -544,7 +552,7 @@
     bottom: 20px
   .modal
     &__dialog
-      width: 100%
+      width: 90%
     &__title
       font-size: 12px
       margin-top: 15px
@@ -552,4 +560,15 @@
     &-wrapper
       flex-direction: column
       align-items: start
-    
+@media ( min-width: 992px)
+ .button
+    &:focus
+      background-color: #191d1e
+    &:hover
+      color: #b3ced1
+ a
+    &:hover
+      color: #b3ced1
+      opacity: 0.5
+    &:active
+      color: #57a1a9     
