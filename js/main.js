@@ -41,6 +41,8 @@ $(document).ready(function () {
   function openModal() {
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
+    var modalForm = $(".modal__contact-form");
+    modalForm.addClass("modal__contact-form--open");
     modalOverlay.addClass("modal__overlay--visible");
     modalDialog.addClass("modal__dialog--visible");
   }
@@ -51,6 +53,13 @@ $(document).ready(function () {
     modalOverlay.removeClass("modal__overlay--visible");
     modalDialog.removeClass("modal__dialog--visible");
   }
+  $(document).keydown(function (e) {
+    if (e.keyCode === 27) {
+      e.stopPropagation();
+      $(".modal").fadeOut();
+    }
+  });
+
   //Обработка форм
   $(".form").each(function () {
     $(this).validate({
